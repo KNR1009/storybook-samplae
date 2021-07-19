@@ -24,6 +24,10 @@ export const Button: React.FC<Props> = ({ purpose = "primary", children }) => {
           background-color: #dc3545;
           color: #fff;
         }
+        .success {
+          background-color: #99ff66;
+          color: #fff;
+        }
       `}</style>
     </button>
   );

@@ -13,3 +13,5 @@ export default {
 export const Default: Story = () => <Button>Primary</Button>;
 
 export const Danger: Story = () => <Button purpose="danger">Danger</Button>;
+
+export const Sucsess: Story = () => <Button purpose="success">Danger</Button>;
