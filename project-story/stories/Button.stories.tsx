@@ -1,37 +1,15 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Button } from './Button';
+import React from "react";
+import { Story, Meta } from "@storybook/react";
+import { Button } from "../components/atoms/Button";
 
 export default {
-  title: 'Example/Button',
+  title: "Button",
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    purpose: { description: "ボタンの役割" },
   },
-} as ComponentMeta<typeof Button>;
+} as Meta;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export const Default: Story = () => <Button>Primary</Button>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const Danger: Story = () => <Button purpose="danger">Danger</Button>;
